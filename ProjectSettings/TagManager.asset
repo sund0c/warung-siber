@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -41,3 +41,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Latar
+    uniqueID: 2290756871
+    locked: 0
+  - name: Bar
+    uniqueID: 2323383397
+    locked: 0
+  - name: Tamu
+    uniqueID: 3762782573
+    locked: 0
+  - name: Efek
+    uniqueID: 3518311243
+    locked: 0
+  m_RenderingLayers:
+  - Default
