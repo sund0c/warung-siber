@@ -12,7 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd961df34eaf242b2860a8a99aff8871, type: 3}
   m_Name: Gede
   m_EditorClassIdentifier: Assembly-CSharp::Tokoh
-  namaTampil: Nama
-  warnaNama: {r: 1, g: 1, b: 1, a: 1}
-  warnaPlaceholder: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  potret: []
+  namaTampil: Gede
+  warnaNama: {r: 0.56078434, g: 0.827451, b: 1, a: 1}
+  warnaPlaceholder: {r: 0.30980393, g: 0.56078434, b: 0.9411765, a: 1}
+  potret:
+  - ekspresi: 0
+    sprite: {fileID: 21300000, guid: a9ecda5fdf0904a4896bc5bd0da5cf90, type: 3}
+  - ekspresi: 1
+    sprite: {fileID: 21300000, guid: decb22e5ae0fc4b6ab914c7266ea2ee1, type: 3}
+  - ekspresi: 2
+    sprite: {fileID: 21300000, guid: db9cbfe43b9f14e55b0319bc0a84ca83, type: 3}
+  - ekspresi: 3
+    sprite: {fileID: 21300000, guid: ccd840c4d149f498489dc09ecc1c7d67, type: 3}
+  - ekspresi: 4
+    sprite: {fileID: 21300000, guid: a50e470f635684756a8c46cec57599ae, type: 3}
+  - ekspresi: 5
+    sprite: {fileID: 21300000, guid: f7a2d5c97cb9643d285a232fd0ec6248, type: 3}

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
@@ -14,11 +15,14 @@ public class DialogManager : MonoBehaviour
     public TextMeshProUGUI teksDialog;
     public GameObject indikatorLanjut;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+
     [Header("Pengaturan")]
     public float hurufPerDetik = 40f;
-    public NaskahDialog naskahAwal;   // diputar otomatis saat scene dimulai (untuk uji coba)
+    public NaskahDialog naskahAwal;
 
-    public event Action SaatSelesai;  // dipanggil ketika naskah habis
+    public event Action SaatSelesai;
     public bool SedangBerjalan { get; private set; }
 
     private NaskahDialog naskah;
@@ -26,8 +30,15 @@ public class DialogManager : MonoBehaviour
     private Coroutine ketik;
     private bool sedangMengetik;
 
+    // Daftar sprite tokoh di scene, dicari berdasarkan file Tokoh-nya
+    private Dictionary<Tokoh, TokohDiScene> tokohDiScene = new Dictionary<Tokoh, TokohDiScene>();
+
     void Start()
     {
+        // Kumpulkan semua sprite tokoh, termasuk yang sedang nonaktif
+        foreach (TokohDiScene t in FindObjectsByType<TokohDiScene>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+            if (t.tokoh != null) tokohDiScene[t.tokoh] = t;
+
         panelDialog.SetActive(false);
         if (naskahAwal != null) Mulai(naskahAwal);
     }
@@ -53,7 +64,6 @@ public class DialogManager : MonoBehaviour
 
         if (sedangMengetik)
         {
-            // Klik saat teks masih berjalan = tampilkan seluruh kalimat langsung
             if (ketik != null) StopCoroutine(ketik);
             TandaiSelesaiMengetik();
         }
@@ -69,9 +79,10 @@ public class DialogManager : MonoBehaviour
     {
         BarisDialog b = naskah.baris[indeks];
 
+        JalankanKejadian(b);
+
         if (b.tokoh == null)
         {
-            // Narasi: tanpa nama dan potret
             teksNama.text = "";
             potret.gameObject.SetActive(false);
         }
@@ -90,6 +101,18 @@ public class DialogManager : MonoBehaviour
 
         if (ketik != null) StopCoroutine(ketik);
         ketik = StartCoroutine(Ketik());
+    }
+
+    void JalankanKejadian(BarisDialog b)
+    {
+        if (b.munculkan != null && tokohDiScene.TryGetValue(b.munculkan, out TokohDiScene masuk))
+            masuk.Masuk();
+
+        if (b.sembunyikan != null && tokohDiScene.TryGetValue(b.sembunyikan, out TokohDiScene keluar))
+            keluar.Keluar();
+
+        if (b.suara != null && audioSource != null)
+            audioSource.PlayOneShot(b.suara);
     }
 
     IEnumerator Ketik()

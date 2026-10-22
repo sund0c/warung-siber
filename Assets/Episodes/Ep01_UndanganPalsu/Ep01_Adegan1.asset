@@ -12,4 +12,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0622f6100999e45e2a15adb1fce560e5, type: 3}
   m_Name: Ep01_Adegan1
   m_EditorClassIdentifier: Assembly-CSharp::NaskahDialog
-  baris: []
+  baris:
+  - tokoh: {fileID: 0}
+    ekspresi: 0
+    dalamHati: 0
+    teks: Malam hari. Hujan turun rintik-rintik di luar Warung Siber.
+    munculkan: {fileID: 0}
+    sembunyikan: {fileID: 0}
+    suara: {fileID: 0}
+  - tokoh: {fileID: 11400000, guid: 80fef63bb4b2043b79327483f7e2e2bd, type: 2}
+    ekspresi: 1
+    dalamHati: 0
+    teks: Bli, kopinya enak banget malam ini. Pas buat lembur.
+    munculkan: {fileID: 0}
+    sembunyikan: {fileID: 0}
+    suara: {fileID: 0}
+  - tokoh: {fileID: 11400000, guid: 076956c5ee98146a18abe84b1d3e9bc1, type: 2}
+    ekspresi: 0
+    dalamHati: 0
+    teks: Lembur lagi, De? Servernya rewel?
+    munculkan: {fileID: 0}
+    sembunyikan: {fileID: 0}
+    suara: {fileID: 0}
+  - tokoh: {fileID: 11400000, guid: 80fef63bb4b2043b79327483f7e2e2bd, type: 2}
+    ekspresi: 1
+    dalamHati: 0
+    teks: Bukan servernya, Bli. Orangnya. Tadi ada yang klik link aneh di kantor. Untung ketahuan cepat.
+    munculkan: {fileID: 0}
+    sembunyikan: {fileID: 0}
+    suara: {fileID: 0}
+  - tokoh: {fileID: 0}
+    ekspresi: 0
+    dalamHati: 0
+    teks: Lonceng pintu berbunyi. Seorang ibu masuk, rambutnya sedikit basah.
+    munculkan: {fileID: 0}
+    sembunyikan: {fileID: 0}
+    suara: {fileID: 8300000, guid: 454280aa1b9eb4062820080e5f079463, type: 3}
+  - tokoh: {fileID: 11400000, guid: 076956c5ee98146a18abe84b1d3e9bc1, type: 2}
+    ekspresi: 0
+    dalamHati: 0
+    teks: "\u2610\tOm Swastyastu, Bu. Silakan duduk. Mau pesan apa?"
+    munculkan: {fileID: 0}
+    sembunyikan: {fileID: 0}
+    suara: {fileID: 0}
+  - tokoh: {fileID: 11400000, guid: c1a91e49ae09c4dc29cd37af71e55b82, type: 2}
+    ekspresi: 2
+    dalamHati: 0
+    teks: Om Swastyastu... Apa saja, Bli. Yang hangat. Kepala saya pusing.
+    munculkan: {fileID: 0}
+    sembunyikan: {fileID: 0}
+    suara: {fileID: 0}
+  - tokoh: {fileID: 11400000, guid: 076956c5ee98146a18abe84b1d3e9bc1, type: 2}
+    ekspresi: 0
+    dalamHati: 1
+    teks: Ibu ini kelihatan sedang banyak pikiran...
+    munculkan: {fileID: 0}
+    sembunyikan: {fileID: 0}
+    suara: {fileID: 0}
